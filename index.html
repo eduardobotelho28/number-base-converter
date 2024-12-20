@@ -5,8 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BaseConverter</title>
     <script src="baseConverter.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+
+        <div class="title-box">
+            <h1>Base Converter</h1>
+            <h2>Your efficient, simple, and fast numerical base converter.</h2>
+            <h2>binary -- decimal -- hexadecimal -- octal.</h2>
+        </div>
+       
+        <form action="">
+
+            <div class="input-group">
+                <label for="number-to-convert">Number to Convert</label>
+                <input type="number" id="number-to-convert">
+            </div>
+
+            <div class="radio-group">
+
+                <p>Conversion Type</p>
+
+                <div class="option">
+                    <div class="radio-wrapper">
+                        <label for="binary-to-decimal">binary to decimal</label>
+                        <input type="radio" name="convert-type" id="binary-to-decimal" checked>
+                    </div>
+                    |
+                    <div class="radio-wrapper">
+                        <label for="binary-to-octal">binary to octal</label>
+                        <input type="radio" name="convert-type" id="binary-to-octal">
+                    </div>
+                    |
+                    <div class="radio-wrapper">
+                        <label for="binary-to-hexa">binary to hexadecimal</label>
+                        <input type="radio" name="convert-type" id="binary-to-hexa">
+                    </div>
+                    
+                </div>
+
+                <hr>
+
+                <div class="option">
+                    <div class="radio-wrapper">
+                        <label for="decimal-to-binary">decimal to binary</label>
+                        <input type="radio" name="convert-type" id="decimal-to-binary">
+                        
+                    </div>
+                    |
+                    <div class="radio-wrapper">
+                        <label for="decimal-to-octal">decimal to octal</label>
+                        <input type="radio" name="convert-type" id="decimal-to-octal">
+                        
+                    </div>
+                    |
+                    <div class="radio-wrapper">
+                        <label for="decimal-to-hexa">decimal to hexadecimal</label>
+                        <input type="radio" name="convert-type" id="decimal-to-hexa">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="option">
+                    <div class="radio-wrapper">
+                        <label for="octal-to-binary">octal to binary</label>
+                        <input type="radio" name="convert-type" id="octal-to-binary">
+                    </div>
+                    |
+                    <div class="radio-wrapper">
+                        <label for="octal-to-decimal">octal to decimal</label>
+                        <input type="radio" name="convert-type" id="octal-to-decimal">
+                    </div>
+                    |
+                    <div class="radio-wrapper">
+                        <label for="octal-to-hexa">octal to hexadecimal</label>
+                        <input type="radio" name="convert-type" id="octal-to-hexa">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="option">
+                    <div class="radio-wrapper">
+                        <label for="hexa-to-binary">hexadecimal to binary</label>
+                        <input type="radio" name="convert-type" id="hexa-to-binary">
+                    </div>
+                    |
+                    <div class="radio-wrapper">
+                        <label for="hexa-to-decimal">hexadecimal to decimal</label>
+                        <input type="radio" name="convert-type" id="hexa-to-decimal">
+                    </div>
+                    |
+                    <div class="radio-wrapper">
+                        <label for="hexa-to-octal">hexadecimal to octal</label>
+                        <input type="radio" name="convert-type" id="hexa-to-octal">
+                    </div>
+                </div>
+ 
+            </div>
+
+            <button type="button">Convert</button>
+        </form>
+    </main>
+
+    <div class="result">
+        <p>Converted number:</p>
+    </div>
 </body>
 </html>

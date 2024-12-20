@@ -1,0 +1,156 @@
+* {
+    margin: 0px           ;
+    padding: 0px          ;  
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100vw              ;
+    height: 100vh             ;
+
+    background-color: #e9ecef; 
+    color: #343a40           ; 
+
+    display: flex             ;
+    justify-content: center   ;
+    align-items: center       ;
+    flex-direction: column    ;
+    gap: 20px                 ;
+}
+
+main, .result {
+    padding: 20px                               ;
+    gap: 30px                                   ;
+    display: flex                               ;
+    flex-direction: column                      ;
+    border-radius: 10px                         ;
+    background-color: #ffffff                 ; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border: none                                ; 
+
+    width: 700px;
+}
+
+/* ------------------------------------------------------------------ */
+
+h1 {
+    font-size: 3rem  ; 
+    font-weight: bold; 
+    color: #2c3e50 ; 
+    line-height: 1.2 ; 
+}
+
+h2 {
+    font-size: 1.5rem; 
+    font-weight: 300 ; 
+    color: #516f8e ; 
+    line-height: 1.0 ; 
+}
+
+/* -------------------------------------------------------------------------- */
+
+form {
+    display: flex          ;
+    justify-content: center;
+    align-items: center    ;
+    flex-direction: column ;
+}
+
+.input-group {
+    display: flex         ;
+    flex-direction: column;
+    gap: 10px             ; 
+    margin-bottom: 20px   ; 
+}
+
+.input-group label {
+    font-size: 1rem  ; 
+    font-weight: bold; 
+    color: #495057 ; 
+}
+
+.input-group input {
+    padding: 4px                                                          ; 
+    font-size: 1rem                                                       ; 
+    border: 1px solid #ced4da                                           ; 
+    border-radius: 5px                                                    ; 
+    outline: none                                                         ; 
+    background-color: #f8f9fa                                           ; 
+    color: #495057                                                      ; 
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+.input-group input:focus {
+    border-color: #007bff                     ; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+form p {
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+.radio-group {
+    display: flex         ;
+    flex-direction: column;
+    gap: 15px             ; 
+    margin-bottom: 20px   ;
+}
+
+.radio-group .option {
+    display: flex      ;
+    align-items: center;
+    gap: 10px          ;  
+}
+
+.radio-group p {
+    font-size: 1.1rem  ;   
+    font-weight: bold  ; 
+    color: #343a40   ; 
+    margin-bottom: 10px; 
+}
+
+.radio-group .option label {
+    font-size: 1rem ; 
+    color: #495057; 
+    cursor: pointer ; 
+}
+
+.radio-group .option input[type="radio"] {
+    appearance: none                                                            ; 
+    width: 14px                                                                 ;
+    height: 14px                                                                ;
+    border: 2px solid #ced4da                                                 ;
+    border-radius: 50%                                                          ; 
+    outline: none                                                               ;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; 
+    cursor: pointer                                                             ;
+}
+
+.radio-group .option input[type="radio"]:checked {
+    background-color: #007bff; 
+    border-color: #007bff    ; 
+}
+
+.radio-wrapper {
+    width: 180px           ;
+    display: flex          ;
+    align-items: center    ;
+    justify-content: flex-start;
+    gap: 5px               ;
+}
+
+/* ---------------------------------------------------------------------- */
+
+button {
+    background-color: #495057;
+    color: white             ;
+    padding: 10px              ;
+    border-radius: 5px         ;
+    cursor: pointer            ;
+    border: none               ;
+}
+
+/* ------------------------------------------------------------------------ */

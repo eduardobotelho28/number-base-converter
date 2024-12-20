@@ -17,5 +17,5 @@ function binary_to_decimal (number) {
 
 }
 
-console.log(binary_to_decimal(11111010100))
+console.log(binary_to_decimal(11111010110))
 
