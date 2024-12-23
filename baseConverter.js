@@ -17,5 +17,24 @@ function binary_to_decimal (number) {
 
 }
 
-console.log(binary_to_decimal(11111010110))
+function decimal_to_binary (number) {
+
+    if (typeof number !== 'number') return "the parameter must be a number"
+
+    if(number == 0) return '0'
+
+    const division_rest = []
+
+    while (number != 0) {
+        division_rest.push(number % 2)
+        number = Math.floor(number/2)
+    }
+
+    division_rest.reverse()
+    return division_rest.join('')
+
+}
+
+// console.log(binary_to_decimal(11111010110))
+// console.log(decimal_to_binary(0))
 
