@@ -2,6 +2,8 @@
 
 // --------------------------------------- functions ------------------------------------------------ //
 
+// ----------------------------- binary to.. ------------------------------------------------------- // 
+
 function binary_to_decimal (number) {
 
     if (typeof number !== 'number') return "the parameter must be a number"
@@ -19,6 +21,16 @@ function binary_to_decimal (number) {
     }, 0)
 
 }
+
+function binary_to_octal (number) {
+    return decimal_to_octal(binary_to_decimal(number))
+}
+
+function binary_to_hexa (number) {
+    return decimal_to_hexa(binary_to_decimal(number))
+}
+
+// --------------------------------------------------------------------------------- //
 
 // --------------------------- decimal to.. --------------------------------------- // 
 
@@ -147,5 +159,5 @@ function hexa_to_octal (number) {
 
 // --------------------------------------------------------------------------------- //
 
-
-console.log(hexa_to_octal(80))
+console.log(hexa_to_binary('1b'))
+console.log(binary_to_hexa(1011101))
