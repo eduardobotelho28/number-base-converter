@@ -141,7 +141,11 @@ function hexa_to_binary (number) {
     return decimal_to_binary(hexa_to_decimal(number))
 }
 
+function hexa_to_octal (number) {
+    return decimal_to_octal(hexa_to_decimal(number))
+}
+
 // --------------------------------------------------------------------------------- //
 
 
-console.log(octal_to_hexa(200))
+console.log(hexa_to_octal(80))
