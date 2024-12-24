@@ -35,6 +35,46 @@ function decimal_to_binary (number) {
 
 }
 
-// console.log(binary_to_decimal(11111010110))
-// console.log(decimal_to_binary(0))
+function octal_to_decimal (number) {
+
+    if (typeof number !== 'number') return "the parameter must be a number"
+
+    if(!/^[0-7]+$/.test(number.toString())) return "the number must be octal"
+
+    const numerals_arr    = number.toString().split('')
+    numerals_arr.reverse()
+
+    const numerals_to_sum = []
+    numerals_arr.forEach( (numeral,index) => { numerals_to_sum.push( (Number(numeral)) * (8**index) )})
+
+    return numerals_to_sum.reduce((acc, currrent) => {
+        return acc+currrent
+    }, 0)
+
+}
+
+function hexa_to_decimal (number) {
+
+    number = number.toString()
+
+    if(!/^[0-9a-fA-F]+$/.test(number.toString())) return "the number must be hexadecimal"
+
+    const numerals_arr    = number.split('')
+    numerals_arr.reverse()
+
+    const numerals_to_sum = []
+    numerals_arr.forEach( (numeral,index) => { 
+        numeral = numeral.replace(/[A-F]/gi, (match) => parseInt(match, 16)); //parse de hexa para decimal.
+        numerals_to_sum.push( (Number(numeral)) * (16**index) )
+    })
+
+    return numerals_to_sum.reduce((acc, currrent) => {
+        return acc+currrent
+    }, 0)
+
+}
+
+console.log(octal_to_decimal(1257))
+console.log(hexa_to_decimal("1257"))
+
 
