@@ -1,4 +1,7 @@
 
+
+// --------------------------------------- functions ------------------------------------------------ //
+
 function binary_to_decimal (number) {
 
     if (typeof number !== 'number') return "the parameter must be a number"
@@ -28,6 +31,24 @@ function decimal_to_binary (number) {
     while (number != 0) {
         division_rest.push(number % 2)
         number = Math.floor(number/2)
+    }
+
+    division_rest.reverse()
+    return division_rest.join('')
+
+}
+
+function decimal_to_octal (number) {
+
+    if (typeof number !== 'number') return "the parameter must be a number"
+
+    if(number == 0) return '0'
+
+    const division_rest = []
+
+    while (number != 0) {
+        division_rest.push(number % 8)
+        number = Math.floor(number/8)
     }
 
     division_rest.reverse()
@@ -74,7 +95,6 @@ function hexa_to_decimal (number) {
 
 }
 
-console.log(octal_to_decimal(1257))
-console.log(hexa_to_decimal("1257"))
 
-
+console.log(decimal_to_octal(177))
+console.log(octal_to_decimal(261))
