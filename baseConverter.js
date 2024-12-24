@@ -20,7 +20,6 @@ function binary_to_decimal (number) {
 
 }
 
-
 // --------------------------- decimal to.. --------------------------------------- // 
 
 function decimal_to_binary (number) {
@@ -109,7 +108,13 @@ function octal_to_binary (number) {
     return decimal_to_binary(octal_to_decimal(number))
 }
 
+function octal_to_hexa (number) {
+    return decimal_to_hexa(octal_to_decimal(number))
+}
+
 // --------------------------------------------------------------------------------- //
+
+// --------------------------- hexa to.. ------------------------------------------ // 
 
 function hexa_to_decimal (number) {
 
@@ -136,5 +141,7 @@ function hexa_to_binary (number) {
     return decimal_to_binary(hexa_to_decimal(number))
 }
 
+// --------------------------------------------------------------------------------- //
 
-console.log(hexa_to_binary(200))
+
+console.log(octal_to_hexa(200))
