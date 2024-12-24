@@ -20,6 +20,9 @@ function binary_to_decimal (number) {
 
 }
 
+
+// --------------------------- decimal to.. --------------------------------------- // 
+
 function decimal_to_binary (number) {
 
     if (typeof number !== 'number') return "the parameter must be a number"
@@ -80,6 +83,10 @@ function decimal_to_hexa (number) {
 
 }
 
+// --------------------------------------------------------------------------------- //
+
+// --------------------------- octal to.. ----------------------------------------- // 
+
 function octal_to_decimal (number) {
 
     if (typeof number !== 'number') return "the parameter must be a number"
@@ -97,6 +104,12 @@ function octal_to_decimal (number) {
     }, 0)
 
 }
+
+function octal_to_binary (number) {
+    return decimal_to_binary(octal_to_decimal(number))
+}
+
+// --------------------------------------------------------------------------------- //
 
 function hexa_to_decimal (number) {
 
@@ -119,6 +132,9 @@ function hexa_to_decimal (number) {
 
 }
 
+function hexa_to_binary (number) {
+    return decimal_to_binary(hexa_to_decimal(number))
+}
 
-console.log(decimal_to_hexa(685))
-console.log(hexa_to_decimal("2ad"))
+
+console.log(hexa_to_binary(200))
