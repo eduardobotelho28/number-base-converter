@@ -56,6 +56,30 @@ function decimal_to_octal (number) {
 
 }
 
+function decimal_to_hexa (number) {
+
+    if (typeof number !== 'number') return "the parameter must be a number"
+
+    if(number == 0) return '0'
+
+    const division_rest = []
+
+    while (number != 0) {
+        division_rest.push(number % 16)
+        number = Math.floor(number / 16)
+    }
+
+    division_rest.reverse()
+    const division_hexa = division_rest.map (number => {
+        
+        return number.toString().replace(/\b(10|11|12|13|14|15)\b/g, (match) => {
+            return String.fromCharCode(parseInt(match) + 55);
+          });
+    })
+    return division_hexa.join('')
+
+}
+
 function octal_to_decimal (number) {
 
     if (typeof number !== 'number') return "the parameter must be a number"
@@ -96,5 +120,5 @@ function hexa_to_decimal (number) {
 }
 
 
-console.log(decimal_to_octal(177))
-console.log(octal_to_decimal(261))
+console.log(decimal_to_hexa(685))
+console.log(hexa_to_decimal("2ad"))
