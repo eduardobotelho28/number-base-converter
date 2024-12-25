@@ -1,4 +1,113 @@
 
+const result_container = document.querySelector('.result #result-text')
+const convert_button   = document.querySelector('#convert-button')
+const input_number     = document.querySelector('#number-to-convert')
+
+convert_button.addEventListener('click', (evt) => {
+
+    result_container.innerHTML = ''
+
+    if(input_number.value == '') {
+        result_container.innerHTML = 'please, enter a number first.'
+        return
+    }
+
+    const selected_option = document.querySelector("input[type='radio']:checked")
+
+    let result = ''
+
+    switch (selected_option.id) {
+        case 'binary-to-decimal':
+
+            result = binary_to_decimal(parseInt(input_number.value))
+            result_container.innerHTML = result
+
+        break;
+
+        case 'binary-to-octal':
+
+            result = binary_to_octal(parseInt(input_number.value))
+            result_container.innerHTML = result
+        
+        break;
+
+        case 'binary-to-hexa':
+
+            result = binary_to_hexa(parseInt(input_number.value))
+            result_container.innerHTML = result
+        
+        break;
+
+        case 'decimal-to-binary':
+
+            result = decimal_to_binary(parseInt(input_number.value))
+            result_container.innerHTML = result
+        
+        break;
+
+
+        case 'decimal-to-octal':
+
+            result = decimal_to_octal(parseInt(input_number.value))
+            result_container.innerHTML = result
+        
+        break;
+
+
+        case 'decimal-to-hexa':
+
+            result = decimal_to_hexa(parseInt(input_number.value))
+            result_container.innerHTML = result
+        
+        break;
+
+        case 'octal-to-binary':
+
+            result = octal_to_binary(parseInt(input_number.value))
+            result_container.innerHTML = result
+        
+        break;
+
+        case 'octal-to-decimal':
+
+            result = octal_to_decimal(parseInt(input_number.value))
+            result_container.innerHTML = result
+        
+        break;
+
+        case 'octal-to-hexa':
+
+            result = octal_to_hexa(parseInt(input_number.value))
+            result_container.innerHTML = result
+        
+        break;
+
+        case 'hexa-to-binary':
+
+            result = hexa_to_binary(input_number.value)
+            result_container.innerHTML = result
+        
+        break;
+
+        case 'hexa-to-decimal':
+
+            result = hexa_to_decimal(input_number.value)
+            result_container.innerHTML = result
+        
+        break;
+
+        case 'hexa-to-octal':
+
+            result = hexa_to_octal(input_number.value)
+            result_container.innerHTML = result
+        
+        break;
+
+        default:
+            break;
+    }
+
+})
 
 // --------------------------------------- functions ------------------------------------------------ //
 
@@ -159,5 +268,3 @@ function hexa_to_octal (number) {
 
 // --------------------------------------------------------------------------------- //
 
-console.log(hexa_to_binary('1b'))
-console.log(binary_to_hexa(1011101))
